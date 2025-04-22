@@ -1,0 +1,27 @@
+version: "4"
+services:
+  web:
+    image: odoo:17.0
+    container_name: noor_web
+    depends_on:
+      - mydb
+    ports:
+      - 9090:8069
+    volumes:
+      - ./home/odoo/.local/share/Odoo:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./extra-addons/pos:/mnt/extra-addons
+      - ./addons17:/mnt/enterprise
+      - ./custom-addons/pos:/mnt/custom-addons
+    environment:
+      - HOST=mydb
+      - USER=odoo
+      - PASSWORD=myodoo
+  mydb:
+    image: postgres:15
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_USER=odoo
