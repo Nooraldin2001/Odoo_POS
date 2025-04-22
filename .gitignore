@@ -15,7 +15,7 @@ home/
 *.zip
 
 # Odoo-specific
-addons17/
-addons-enterprise/
-addons-private/
-config/odoo.conf
+# addons17/
+# addons-enterprise/
+# addons-private/
+# config/odoo.conf
