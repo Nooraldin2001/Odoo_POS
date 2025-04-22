@@ -13,9 +13,3 @@ home/
 *.pid
 *.sock
 *.zip
-
-# Odoo-specific
-# addons17/
-# addons-enterprise/
-# addons-private/
-# config/odoo.conf
