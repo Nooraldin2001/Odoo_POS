@@ -10,8 +10,7 @@ services:
     volumes:
       - ./home/odoo/.local/share/Odoo:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./extra-addons/pos:/mnt/extra-addons
-      - ./addons17:/mnt/enterprise
+      - ./oca-addons:/mnt/oca-addons
       - ./custom-addons/pos:/mnt/custom-addons
     environment:
       - HOST=mydb
