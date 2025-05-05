@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_users_form_inherit_pos_cashier" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.pos.cashier</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <field name="groups_id" position="after">
+                <field name="groups_id" widget="many2many_tags"
+                       domain="[('id', 'in', [ref('custom_pos_disable_delete.group_pos_cashier')])]"/>
+            </field>
+        </field>
+    </record>
+</odoo>

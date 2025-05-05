@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="0">
+        <record id="group_pos_cashier" model="res.groups">
+            <field name="name">POS Cashier (Limited)</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+        </record>
+    </data>
+</odoo>
