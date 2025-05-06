@@ -6,11 +6,12 @@
     'summary': 'Restrict delete for Cashiers in POS',
     'data': [
         'security/security.xml',
-        'views/pos_user_groups.xml',
+        'security/ir.model.access.csv',
+        'views/pos_user_group.xml',
     ],
     'assets': {
         'point_of_sale.assets': [
-        '/custom_pos_disable_delete/static/src/js/DisableDeleteOrder.js',
+        'custom_pos_disable_delete/static/src/js/DisableDeleteOrder.js',
         ],
     },
     'installable': True,
