@@ -17,20 +17,26 @@ patch(NumpadWidget.prototype, {
         this.deleteEnabled = canDelete;
         
         // Find and update the delete button if it exists
-        const deleteButton = buttons.find(btn => btn.value === 'Backspace');
-        if (deleteButton) {
-            deleteButton.disabled = !canDelete;
+        for (let i = 0; i < buttons.length; i++) {
+            if (buttons[i].value === 'Backspace') {
+                buttons[i].disabled = !canDelete;
+                // Make it visually clear the button is disabled
+                if (!canDelete) {
+                    buttons[i].class = (buttons[i].class || '') + ' disabled-button';
+                }
+            }
         }
         
         return buttons;
     },
     
-    async _onClickNumpad(event) {
+    _onClickNumpad(event) {
         const button = event.target.closest('.numpad-button');
         if (button && button.dataset.value === 'Backspace' && !this.deleteEnabled) {
             // Prevent action if delete is disabled
+            console.log("Delete button is disabled for this user");
             return;
         }
-        await super._onClickNumpad(event);
+        return super._onClickNumpad(event);
     }
 });

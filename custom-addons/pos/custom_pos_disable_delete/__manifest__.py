@@ -17,10 +17,12 @@
     ],
     'assets': {
         'point_of_sale.assets': [
+            'custom_pos_disable_delete/static/src/css/pos_disable_delete.css',
             'custom_pos_disable_delete/static/src/js/models.js',
             'custom_pos_disable_delete/static/src/js/disable_delete_button.js',
         ],
     },
+    'post_init_hook': 'post_init_hook',
     'installable': True,
     'application': False,
 }
