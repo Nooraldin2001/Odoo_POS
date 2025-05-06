@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_pos_order_cashier,pos.order.cashier,point_of_sale.model_pos_order,custom_pos_disable_delete.group_pos_cashier,1,1,1,0
-access_pos_order_line_cashier,pos.order.line.cashier,point_of_sale.model_pos_order_line,custom_pos_disable_delete.group_pos_cashier,1,1,1,0
+access_pos_order_cashier_restricted,pos.order.cashier.restricted,point_of_sale.model_pos_order,custom_pos_disable_delete.group_pos_cashier_restricted,1,1,1,0
+access_pos_order_line_cashier_restricted,pos.order.line.cashier.restricted,point_of_sale.model_pos_order_line,custom_pos_disable_delete.group_pos_cashier_restricted,1,1,1,0
