@@ -1,0 +1,6 @@
+.pos .numpad .input-button.numpad-backspace.disabled-mode,
+.pos .numpad .input-button.numpad-backspace.disabled-mode:hover {
+    background: #c7c7c7;
+    color: #a5a1a1;
+    cursor: not-allowed;
+} 

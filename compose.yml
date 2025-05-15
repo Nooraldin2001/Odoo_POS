@@ -1,8 +1,8 @@
-version: "4"
 services:
   web:
-    image: odoo:17.0
+    image: odoo:16.0
     container_name: noor_web
+    restart: unless-stopped
     depends_on:
       - mydb
     ports:
@@ -10,7 +10,7 @@ services:
     volumes:
       - ./home/odoo/.local/share/Odoo:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./oca-addons:/mnt/oca-addons
+      - ./oca-addons/pos:/mnt/oca-addons
       - ./custom-addons/pos:/mnt/custom-addons
     environment:
       - HOST=mydb
@@ -18,6 +18,8 @@ services:
       - PASSWORD=myodoo
   mydb:
     image: postgres:15
+    container_name: noor_db
+    restart: unless-stopped
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
     environment:
