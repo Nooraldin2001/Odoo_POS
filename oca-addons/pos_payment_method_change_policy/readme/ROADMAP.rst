@@ -1,1 +1,0 @@
-* Implement the ability to print a voucher.

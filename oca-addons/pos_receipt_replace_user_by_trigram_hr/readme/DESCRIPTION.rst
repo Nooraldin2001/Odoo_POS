@@ -1,1 +1,0 @@
-Link module between pos_receipt_replace_user_by_trigram and pos_hr
